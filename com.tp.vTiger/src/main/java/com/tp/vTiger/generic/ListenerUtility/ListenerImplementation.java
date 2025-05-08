@@ -28,13 +28,13 @@ public class ListenerImplementation implements ITestListener,ISuiteListener{
 		ExtentSparkReporter spark = new ExtentSparkReporter("./ExtentReport/Report" + "_"+time);
 		spark.config().setTheme(Theme.DARK);
 		spark.config().setDocumentTitle("VtigerReports");
-		spark.config().setReportName("Gowsalya");
+		spark.config().setReportName("EReport");
 
 		// system configure
 		report = new ExtentReports();
 		report.attachReporter(spark);
 		report.setSystemInfo("OS", "Windows");
-		report.setSystemInfo("executedBy", "Gowsalya");
+		report.setSystemInfo("executedBy", "Prathvi");
 		report.setSystemInfo("Browser", "Chrome");
 
 

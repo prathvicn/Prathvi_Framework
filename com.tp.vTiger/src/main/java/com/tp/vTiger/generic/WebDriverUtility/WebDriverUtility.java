@@ -84,12 +84,6 @@ public class WebDriverUtility {
 
 	}
 	
-	/**
-	 * This method is used to navigate to page
-	 * @param driver
-	 * @param text1
-	 * @param text2
-	 */
 	public void navigateToPage(WebDriver driver,String text1,String text2) {
 		driver.findElement(By.linkText(text1)).click();
 		driver.findElement(By.xpath("//img[@title='"+text2+"']")).click();
@@ -104,19 +98,5 @@ public class WebDriverUtility {
 		
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
