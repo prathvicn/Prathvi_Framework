@@ -10,7 +10,14 @@ import com.tp.vTiger.generic.ObjectRepository.ContactInformationPage;
 import com.tp.vTiger.generic.ObjectRepository.CreatingNewContactPage;
 import com.tp.vTiger.generic.ObjectRepository.CreatingNewOrganizationPage;
 import com.tp.vTiger.generic.ObjectRepository.OrganizationPopupPage;
-
+/**
+ * Author: Prathvi
+ * Module: Contact
+ * Test_cases: *Create Contact
+ * 				*Contact with Org
+ * 				*Contact with Support Date
+ * 				
+ */
 public class ContactTest extends BaseClass {
 	String contact_name = null;
 	String Org_name = null;
@@ -61,7 +68,6 @@ public class ContactTest extends BaseClass {
 		cip.verifyingHeader(cip.getContactInfoHeader_Txt(), contact_name);
 		cip.verifyingTextfield(cip.getLastname_Edt(), contact_name);
 		cip.verifyingTextfield(cip.getOrgname_edt(), Org_name);
-	//	cip.verifyingOrgName(Org_name);
 
 	}
 	
@@ -90,27 +96,7 @@ public class ContactTest extends BaseClass {
 		cip.verifyingHeader(cip.getContactInfoHeader_Txt(), contact_name);
 		cip.verifyingTextfield(cip.getLastname_Edt(), contact_name);
 		cip.verifyingTextfield(cip.getSupportStartDate_Edt(), actDate);
-		cip.verifyingTextfield(cip.getSupportEndDate_Edt(), date_req);
-		
-		/*String actStartDate = cip.getSupportStartDate_Edt().getText();
-		SoftAssert sa = new SoftAssert();
-		sa.assertEquals(actStartDate, actDate);
-		sa.assertAll();
-		if(actStartDate.trim().equals(actDate)) {
-			System.out.println(actDate+" start date is verified==pass");
-		}
-		else{
-			System.out.println(actDate+" start date is not verified==fail");	
-		}
-
-		String actEndDate = cip.getSupportEndDate_Edt().getText();  
-		if(actEndDate.trim().equals(date_req)) {
-			System.out.println(date_req+" end date is verified==pass");
-		}
-		else{
-			System.out.println(date_req+" end date is not verified==fail");	
-		}*/
-
+		cip.verifyingTextfield(cip.getSupportEndDate_Edt(), date_req);		
 
 	}
 

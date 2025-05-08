@@ -3,7 +3,6 @@
 <suite name="Suite">
 <listeners>
 	<listener class-name="com.tp.vTiger.generic.ListenerUtility.ListenerImplementation"></listener>
-
 </listeners>
   <test thread-count="3" name="Test">
     <classes>

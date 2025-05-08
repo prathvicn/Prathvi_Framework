@@ -14,7 +14,13 @@ import com.tp.vTiger.generic.ObjectRepository.CreatingNewVendorPage;
 import com.tp.vTiger.generic.ObjectRepository.HomePage;
 import com.tp.vTiger.generic.ObjectRepository.ProductInfoPage;
 import com.tp.vTiger.generic.ObjectRepository.VendorPopupPage;
-
+/**
+ * Author: Prathvi
+ * Module: Product
+ * Test_cases: *Create Product
+ * 				*Product with Support Date
+ * 				*Product With Vendor
+ */
 public class ProductTest extends BaseClass {
 
 	String product_name,vendor_name = null;

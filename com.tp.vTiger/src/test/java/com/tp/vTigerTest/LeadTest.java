@@ -6,7 +6,12 @@ import org.testng.annotations.Test;
 import com.tp.vTiger.generic.BaseClassTest.BaseClass;
 import com.tp.vTiger.generic.ObjectRepository.CreatingNewLeadPage;
 import com.tp.vTiger.generic.ObjectRepository.LeadInfoPage;
-
+/**
+ * Author: Prathvi
+ * Module: Lead
+ * Test_cases: *Create Lead
+ * 				*Lead with Leadsource & Industry
+ */
 public class LeadTest extends BaseClass{
 	
 	String lead_lastname,company,leadsource,industry = null;
@@ -27,30 +32,10 @@ public class LeadTest extends BaseClass{
 	
 		LeadInfoPage leadInfoPage = new LeadInfoPage(driver);
 		
-		validate(leadInfoPage.getLeadInfoHeader_Txt(), lead_lastname);
-		/*String header_info = leadInfoPage.getLeadInfoHeader_Txt().getText();
-		if(header_info.contains(lead_lastname)) {
-			System.out.println(lead_lastname+" is created==pass");
-		}
-		else {
-			System.out.println(lead_lastname+" is not created==fail");
-		}
-
 		//verifying Lead name
-		String actLastname = leadInfoPage.getLeadLastName_Edt().getText();
-		if(actLastname.trim().equals(lead_lastname)) {
-			System.out.println(lead_lastname+" information is verified==pass");
-		}
-		else{
-			System.out.println(lead_lastname+" information is not verified==fail");	
-		}*/
 		
+		validate(leadInfoPage.getLeadInfoHeader_Txt(), lead_lastname);	
 	}
-
-
-
-	
-
 
 	@Test
 	public void createLeadWithLeadSourceAndIndustryTest() throws  Throwable {
@@ -77,40 +62,14 @@ public class LeadTest extends BaseClass{
 	
 		newLeadPage.getSave_Btn().click();
 			LeadInfoPage leadInfoPage = new LeadInfoPage(driver);
-
-		//verifying vendor info page
-		String header_info = leadInfoPage.getLeadInfoHeader_Txt().getText();
-		if(header_info.contains(lead_lastname)) {
-			System.out.println(lead_lastname+" is created==pass");
-		}
-		else {
-			System.out.println(lead_lastname+" is not created==fail");
-		}
-
+			//verifying lead info page
+			validate(leadInfoPage.getLeadInfoHeader_Txt(), lead_lastname);
+		
 		//verifying lead name
-		String actLastname = leadInfoPage.getLeadLastName_Edt().getText();
-		if(actLastname.trim().equals(lead_lastname)) {
-			System.out.println(lead_lastname+" lastname is verified==pass");
-		}
-		else{
-			System.out.println(lead_lastname+" lastname is not verified==fail");	
-		}
+			validateTextfield(leadInfoPage.getLeadLastName_Edt(), lead_lastname);
 		//verifying lead source
-		String actLeadSource = leadInfoPage.getLeadsource_Edt().getText();
-		if(actLeadSource.trim().equals(leadsource)) {
-			System.out.println(leadsource+" leadsource is verified==pass");
-		}
-		else{
-			System.out.println(leadsource+" leadsource is not verified==fail");	
-		}
-
+			validateTextfield(leadInfoPage.getLeadsource_Edt(), leadsource);
 		//verifying industry
-		String actIndustry = leadInfoPage.getIndustry_Edt().getText();
-		if(actIndustry.trim().equals(industry)) {
-			System.out.println(industry+" industry is verified==pass");
-		}
-		else{
-			System.out.println(industry+" industry is not verified==fail");	
-		}
+			validateTextfield(leadInfoPage.getIndustry_Edt(), industry);
 	}
 }

@@ -58,43 +58,8 @@ public class ContactInformationPage {
 		boolean b = header_info.contains(text);
 		Assert.assertTrue(b);
 		Reporter.log("Date verified",true);
-
-		/*if(header_info.contains(text)) {
-			System.out.println(text+" is created==pass");
-		}
-		else {
-			System.out.println(text+" is not created==fail");
-		}*/
-
 	}
-	/*public void verifyContactName(String text) {
-		String actLastname =getLastname_Edt().getText();
-		SoftAssert sa = new SoftAssert();
-		sa.assertEquals(actLastname.trim(), text);
-		sa.assertAll();
-		Reporter.log("contactName verified",true);
-	}*/
-		/*	if(actLastname.trim().equals(text)) {
-			System.out.println(text+" information is vernoified==pass");
-		}
-		else{
-			System.out.println(text+" information is not verified==fail");	
-		}*/
 
-	
-
-	/*public void verifyingOrgName(String text) {
-		String actOrg_name = getOrgname_edt().getText();
-		//String actOrg_name = driver.findElement(By.id("mouseArea_Organization Name")).getText();
-
-		if(actOrg_name.trim().equals(text)) {
-			System.out.println(text+" information is verified==pass");
-		}
-		else{
-			System.out.println(text+" information is not verified==fail");	
-		}
-	}*/
-	
 	public void verifyingHeader(WebElement elmt,String text) {
 		String actualText = elmt.getText();
 		boolean b = actualText.contains(text);

@@ -13,7 +13,13 @@ import com.tp.vTiger.generic.ObjectRepository.CreatingNewOrganizationPage;
 import com.tp.vTiger.generic.ObjectRepository.OrganizationInfoPage;
 import com.tp.vTiger.generic.WebDriverUtility.JavaUtility;
 import com.tp.vTiger.generic.WebDriverUtility.WebDriverUtility;
-
+/**
+ * Author: Prathvi
+ * Module: Organization
+ * Test_cases: *Create Organization
+ * 				*Organization with Industry & Type
+ * 				*Organization With Phone Number
+ */
 public class OrganizationTest extends BaseClass {
 	String contact_name = null;
 	String Org_name,last_name,industry,type,phone_number = null;
@@ -28,21 +34,10 @@ public class OrganizationTest extends BaseClass {
 
 		OrganizationInfoPage orgInfoPage = new OrganizationInfoPage(driver);
 		
-		/*String header_info =orgInfoPage.getOrgInfoHeader_Txt().getText();
-		if(header_info.contains(Org_name)) {
-			System.out.println(Org_name+" is created==pass");
-		}
-		else {
-			System.out.println(Org_name+" is not created==fail");
-		}
-
-		String actOrgname = orgInfoPage.getOrgname_edt().getText();
-		if(actOrgname.trim().equals(Org_name)) {
-			System.out.println(Org_name+" information is verified==pass");
-		}
-		else{
-			System.out.println(Org_name+" information is not verified==fail");	
-		}*/
+		//verify the header info
+		validate(orgInfoPage.getOrgInfoHeader_Txt(), Org_name);
+	
+		
 	}
 
 	@Test
@@ -66,31 +61,13 @@ public class OrganizationTest extends BaseClass {
 
 		//verify the header info
 		OrganizationInfoPage orgInfoPage = new OrganizationInfoPage(driver);
-		String header_info =orgInfoPage.getOrgInfoHeader_Txt().getText();
-		if(header_info.contains(Org_name)) {
-			System.out.println(Org_name+" is created==pass");
-		}
-		else {
-			System.out.println(Org_name+" is not created==fail");
-		}
+		validate(orgInfoPage.getOrgInfoHeader_Txt(), Org_name);
 
-		//verify the industry		
-		String actIndustry = orgInfoPage.getIndustry_edt().getText();
-		if(actIndustry.trim().equals(industry)) {
-			System.out.println(industry+" industry is verified==pass");
-		}
-		else {
-			System.out.println(industry+" industry is not verified==fail");
-		}
+		//verify the industry
+		validateTextfield(orgInfoPage.getIndustry_edt(), industry);
 
 		//verify type 
-		String actType = orgInfoPage.getType_Edt().getText();
-		if(actType.trim().equals(type)) {
-			System.out.println(type+" type is verified==pass");
-		}
-		else {
-			System.out.println(type+" type is not verified==fail");
-		}
+		validateTextfield(orgInfoPage.getType_Edt(), type);
 
 	}
 
@@ -107,23 +84,25 @@ public class OrganizationTest extends BaseClass {
 		OrganizationInfoPage orgInfoPage = new OrganizationInfoPage(driver);
 
 		//verify the header info
-		String header_info = orgInfoPage.getOrgInfoHeader_Txt().getText();
+		validate(orgInfoPage.getOrgInfoHeader_Txt(), Org_name);
+		/*String header_info = orgInfoPage.getOrgInfoHeader_Txt().getText();
 		if(header_info.contains(Org_name)) {
 			System.out.println(Org_name+" is verified==pass");
 		}
 		else {
 			System.out.println(Org_name+" is not verified==fail");
-		}
+		}*/
 
 
-		//verify the phone number		
-		String actPhnumber = orgInfoPage.getPhone_Edt().getText();
+		//verify the phone number
+		validate(orgInfoPage.getPhone_Edt(), phone_number);
+		/*String actPhnumber = orgInfoPage.getPhone_Edt().getText();
 		if(actPhnumber.trim().equals(phone_number)) {
 			System.out.println(phone_number+" is verified==pass");
 		}
 		else {
 			System.out.println(phone_number+" is not verified==fail");
-		}
+		}*/
 
 	}
 }

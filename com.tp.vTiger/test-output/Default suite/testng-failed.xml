@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tp.vTigerTest.LeadTest">
+      <class name="com.tp.vTigerTest.OrganizationTest">
         <methods>
           <include name="toLogin"/>
           <include name="toClose"/>
           <include name="toLaunch"/>
-          <include name="createLeadTest"/>
+          <include name="createOrganizationWithPhoneNumberTest"/>
           <include name="toLogout"/>
         </methods>
-      </class> <!-- com.tp.vTigerTest.LeadTest -->
+      </class> <!-- com.tp.vTigerTest.OrganizationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

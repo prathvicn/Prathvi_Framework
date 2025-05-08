@@ -15,6 +15,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.testng.asserts.SoftAssert;
+
 import com.tp.vTiger.generic.FileUtility.ExcelUtility;
 import com.tp.vTiger.generic.FileUtility.FileUtility;
 import com.tp.vTiger.generic.ObjectRepository.HomePage;
@@ -89,6 +91,15 @@ public class BaseClass {
 		Reporter.log(actualText+" verified",true);
 	
 	}
+	
+	public void validateTextfield(WebElement elmt,String text) {
+		String actualText = elmt.getText();
+		SoftAssert sa = new SoftAssert();
+		sa.assertEquals(actualText.trim(), text);
+		sa.assertAll();
+		Reporter.log(actualText+" verified",true);
+		}
+
 	
 	
 }
