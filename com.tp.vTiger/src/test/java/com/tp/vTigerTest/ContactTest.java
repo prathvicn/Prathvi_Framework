@@ -90,13 +90,14 @@ public class ContactTest extends BaseClass {
 		newContactPage.getSave_Btn().click();
 	
 
-		//verifying
-		ContactInformationPage cip = new ContactInformationPage(driver);
 		
-		cip.verifyingHeader(cip.getContactInfoHeader_Txt(), contact_name);
-		cip.verifyingTextfield(cip.getLastname_Edt(), contact_name);
-		cip.verifyingTextfield(cip.getSupportStartDate_Edt(), actDate);
-		cip.verifyingTextfield(cip.getSupportEndDate_Edt(), date_req);		
+		ContactInformationPage contactInfoPage = new ContactInformationPage(driver);
+		//Verify Contact Info Header
+		
+		validate(contactInfoPage.getContactInfoHeader_Txt(), contact_name);
+		validateTextfield(contactInfoPage.getLastname_Edt(), contact_name);
+		validateTextfield(contactInfoPage.getSupportStartDate_Edt(), actDate);
+		validateTextfield(contactInfoPage.getSupportEndDate_Edt(), date_req);		
 
 	}
 

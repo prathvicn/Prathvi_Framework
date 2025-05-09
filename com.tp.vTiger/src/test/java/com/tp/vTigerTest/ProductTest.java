@@ -142,6 +142,8 @@ public class ProductTest extends BaseClass {
 
 		ProductInfoPage prodInfoPage = new ProductInfoPage(driver);
 		//verifying product info page
+		validate(prodInfoPage.getProductInfoHeader_Txt(), product_name);
+		/*
 		String header_info = prodInfoPage.getProductInfoHeader_Txt().getText();
 
 		if(header_info.contains(product_name)) {
@@ -149,25 +151,29 @@ public class ProductTest extends BaseClass {
 		}
 		else {
 			System.out.println(product_name+" is not created==fail");
-		}
+		}*/
 
 		//verifying product name
+		validateTextfield(prodInfoPage.getProductName_Edt(), product_name);
+		/*
 		String actProname = prodInfoPage.getProductName_Edt().getText();
 		if(actProname.trim().equals(product_name)) {
 			System.out.println(product_name+" information is verified==pass");
 		}
 		else{
 			System.out.println(product_name+" information is not verified==fail");	
-		}
+		}*/
 
 		//verifying vendor name in product page
+		validateTextfield(prodInfoPage.getVendorName_Edt(), vendor_name);
+		/*
 		String actVendor_name = prodInfoPage.getVendorName_Edt().getText();
 		if(actVendor_name.trim().equals(vendor_name)) {
 			System.out.println(vendor_name+" information is verified==pass");
 		}
 		else{
 			System.out.println(vendor_name+" information is not verified==fail");	
-		}
+		}*/
 
 	}
 }

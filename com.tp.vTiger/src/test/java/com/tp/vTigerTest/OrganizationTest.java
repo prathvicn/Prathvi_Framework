@@ -61,6 +61,7 @@ public class OrganizationTest extends BaseClass {
 
 		//verify the header info
 		OrganizationInfoPage orgInfoPage = new OrganizationInfoPage(driver);
+		
 		validate(orgInfoPage.getOrgInfoHeader_Txt(), Org_name);
 
 		//verify the industry
@@ -85,24 +86,9 @@ public class OrganizationTest extends BaseClass {
 
 		//verify the header info
 		validate(orgInfoPage.getOrgInfoHeader_Txt(), Org_name);
-		/*String header_info = orgInfoPage.getOrgInfoHeader_Txt().getText();
-		if(header_info.contains(Org_name)) {
-			System.out.println(Org_name+" is verified==pass");
-		}
-		else {
-			System.out.println(Org_name+" is not verified==fail");
-		}*/
-
 
 		//verify the phone number
 		validate(orgInfoPage.getPhone_Edt(), phone_number);
-		/*String actPhnumber = orgInfoPage.getPhone_Edt().getText();
-		if(actPhnumber.trim().equals(phone_number)) {
-			System.out.println(phone_number+" is verified==pass");
-		}
-		else {
-			System.out.println(phone_number+" is not verified==fail");
-		}*/
 
 	}
 }

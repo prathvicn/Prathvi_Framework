@@ -11,10 +11,7 @@
       <![CDATA[Logged In Successfully]]>
     </line>
     <line>
-      <![CDATA[[ ACC17564 ] TekP_416 - Organization Information verified]]>
-    </line>
-    <line>
-      <![CDATA[  9760456233 verified]]>
+      <![CDATA[[ VEN746 ] Google228 - Vendor Information verified]]>
     </line>
     <line>
       <![CDATA[Logged out Successfully]]>
@@ -23,12 +20,12 @@
       <![CDATA[Browser got Closed Successfully]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-05-07T17:03:43 IST" name="Default suite" finished-at="2025-05-07T17:04:02 IST" duration-ms="19465">
+  <suite started-at="2025-05-09T11:59:15 IST" name="Default suite" finished-at="2025-05-09T11:59:49 IST" duration-ms="33472">
     <groups>
     </groups>
-    <test started-at="2025-05-07T17:03:43 IST" name="Default test" finished-at="2025-05-07T17:04:02 IST" duration-ms="19465">
-      <class name="com.tp.vTigerTest.OrganizationTest">
-        <test-method is-config="true" signature="toLaunch(java.lang.String)[pri:0, instance:com.tp.vTigerTest.OrganizationTest@1e800aaa]" started-at="2025-05-07T17:03:43 IST" name="toLaunch" finished-at="2025-05-07T17:03:46 IST" duration-ms="3443" status="PASS">
+    <test started-at="2025-05-09T11:59:15 IST" name="Default test" finished-at="2025-05-09T11:59:49 IST" duration-ms="33472">
+      <class name="com.tp.vTigerTest.VendorTest">
+        <test-method is-config="true" signature="toLaunch(java.lang.String)[pri:0, instance:com.tp.vTigerTest.VendorTest@477b4cdf]" started-at="2025-05-09T11:59:15 IST" name="toLaunch" finished-at="2025-05-09T11:59:19 IST" duration-ms="3575" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,38 +42,35 @@
             </line>
           </reporter-output>
         </test-method> <!-- toLaunch -->
-        <test-method is-config="true" signature="toLogin()[pri:0, instance:com.tp.vTigerTest.OrganizationTest@1e800aaa]" started-at="2025-05-07T17:03:47 IST" name="toLogin" finished-at="2025-05-07T17:03:53 IST" duration-ms="6339" status="PASS">
+        <test-method is-config="true" signature="toLogin()[pri:0, instance:com.tp.vTigerTest.VendorTest@477b4cdf]" started-at="2025-05-09T11:59:19 IST" name="toLogin" finished-at="2025-05-09T11:59:36 IST" duration-ms="16726" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged In Successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- toLogin -->
-        <test-method signature="createOrganizationWithPhoneNumberTest()[pri:0, instance:com.tp.vTigerTest.OrganizationTest@1e800aaa]" started-at="2025-05-07T17:03:53 IST" name="createOrganizationWithPhoneNumberTest" finished-at="2025-05-07T17:04:00 IST" duration-ms="7039" status="PASS">
+        <test-method signature="createVendorTest()[pri:0, instance:com.tp.vTigerTest.VendorTest@477b4cdf]" started-at="2025-05-09T11:59:36 IST" name="createVendorTest" finished-at="2025-05-09T11:59:46 IST" duration-ms="10545" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[[ ACC17564 ] TekP_416 - Organization Information verified]]>
-            </line>
-            <line>
-              <![CDATA[  9760456233 verified]]>
+              <![CDATA[[ VEN746 ] Google228 - Vendor Information verified]]>
             </line>
           </reporter-output>
-        </test-method> <!-- createOrganizationWithPhoneNumberTest -->
-        <test-method is-config="true" signature="toLogout()[pri:0, instance:com.tp.vTigerTest.OrganizationTest@1e800aaa]" started-at="2025-05-07T17:04:00 IST" name="toLogout" finished-at="2025-05-07T17:04:01 IST" duration-ms="1154" status="PASS">
+        </test-method> <!-- createVendorTest -->
+        <test-method is-config="true" signature="toLogout()[pri:0, instance:com.tp.vTigerTest.VendorTest@477b4cdf]" started-at="2025-05-09T11:59:46 IST" name="toLogout" finished-at="2025-05-09T11:59:47 IST" duration-ms="1244" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Logged out Successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- toLogout -->
-        <test-method is-config="true" signature="toClose()[pri:0, instance:com.tp.vTigerTest.OrganizationTest@1e800aaa]" started-at="2025-05-07T17:04:01 IST" name="toClose" finished-at="2025-05-07T17:04:02 IST" duration-ms="1446" status="PASS">
+        <test-method is-config="true" signature="toClose()[pri:0, instance:com.tp.vTigerTest.VendorTest@477b4cdf]" started-at="2025-05-09T11:59:47 IST" name="toClose" finished-at="2025-05-09T11:59:49 IST" duration-ms="1332" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser got Closed Successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- toClose -->
-      </class> <!-- com.tp.vTigerTest.OrganizationTest -->
+      </class> <!-- com.tp.vTigerTest.VendorTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
